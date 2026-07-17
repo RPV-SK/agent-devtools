@@ -1,0 +1,10 @@
+[
+  {
+    "id": "example-drop-permission-check",
+    "file": "src/yourpkg/auth.py",
+    "find": "if not user.can_edit(doc):",
+    "replace": "if False:",
+    "tests": ["tests/test_auth.py::test_edit_requires_permission"],
+    "note": "The permission gate must be load-bearing: removing it has to turn at least one test red. A probe that stays green is a test-gap finding, not a pass."
+  }
+]

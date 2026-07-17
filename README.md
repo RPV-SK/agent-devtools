@@ -12,9 +12,9 @@ got burned without it.
 | Tool | What it does | Why it exists |
 |---|---|---|
 | [`pytest-progress/`](pytest-progress/) | Streams the currently-running test + elapsed time to a file an orchestrator can watch | A "hung" 8-minute suite was actually a 16-minute crawl under machine load — killed twice for lack of one glance of visibility |
-| [`mutprobe/`](mutprobe/) *(coming)* | Declared mutation probes with guaranteed snapshot restore — "would the tests fail under a broken implementation?" as a tool, not an art | ~30 hand-rolled sed-and-restore probes across one engagement; one `git checkout --` restore silently ate uncommitted work |
-| [`fakedrive/`](fakedrive/) *(coming)* | Real mountable macOS volumes (hdiutil DMGs with real diskutil VolumeUUIDs) as test fixtures | "Blocked on physical hardware" for months — when a synthetic drive with a real UUID takes 2 seconds to mint |
-| [`appdriver/`](appdriver/) *(coming)* | Native macOS window list / screenshot / input CLI (CGWindowList + CGEvent) | Agents could verify a web engine but never the actual native app window users see |
+| [`mutprobe/`](mutprobe/) | Declared mutation probes with guaranteed snapshot restore — "would the tests fail under a broken implementation?" as a tool, not an art | ~30 hand-rolled sed-and-restore probes across one engagement; one `git checkout --` restore silently ate uncommitted work |
+| [`fakedrive/`](fakedrive/) | Real mountable macOS volumes (hdiutil DMGs with real diskutil VolumeUUIDs) as test fixtures | "Blocked on physical hardware" for months — when a synthetic drive with a real UUID takes 2 seconds to mint |
+| [`appdriver/`](appdriver/) | Native macOS window list / screenshot / input CLI (CGWindowList + CGEvent) | Agents could verify a web engine but never the actual native app window users see |
 | [`skills/two-critic-slice/`](skills/two-critic-slice/) | An orchestration skill: build agent → two independent critics → verify-the-critic → batched fix round → serialized merge | Seven consecutive feature slices each had a real defect caught pre-merge by this pattern — including a cache that served the wrong photo and a comparison view that silently drifted crops |
 
 ## Philosophy
