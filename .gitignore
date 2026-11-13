@@ -1,0 +1,2 @@
+# Claude Code per-machine settings: can hold tokens, never commit
+.claude/settings.local.json
